@@ -1,0 +1,59 @@
+body .slug-pattern {background-color:#2280a8;}
+ul.pricing li.price span {color:#217b9d;}
+.body .pagination ul.pages li.active a:hover {color:#217b9d;}
+.body .blog blockquote, blockquote.full {border-left:2px solid #217b9d;}
+.body .blog.style-4 .border .meta p {background:#217b9d;}
+.footer.style-2 .foot-nav-bg {background-color:#2f86a8;}
+.footer .foot-nav {background-color:#2f86a8;}
+h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {color:#217b9d;}
+a, a:visited { color: #2f86a8; }	
+.tabbed-area ul.tabs li a.active {color:#3783a0;border-top:1px solid #2f86a8;}
+.header .nav .standard ul.tabs li a.active, .header .nav .standard ul.tabs li a:hover {color:#3796ba;}
+.header .logo {background-color:#3aa9d2;}
+.footer .logo-caption, .footer .logo-caption-overlay {background-color:#2280a8;}
+
+.sdw{
+	width:100%;
+	height:25px;
+	background: url(../images/design/map-shadow.png) no-repeat;
+	}
+	@media screen and (max-width: 957px) {
+.sdw{
+	width:0%;
+	height:0px;
+	background: none;
+	}
+		
+	}
+	.admin{
+	width="100%";
+	 height="640px";
+	}
+
+#h2 h2{border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;margin:0;padding:0
+ font-size: Cantarell, Verdana, sans-serif;
+        text-align: center;
+        font-size: 24px;
+        text-shadow: 1px 1px 2px #222;
+		
+}
+#h2 h2 span { color: #09C; }
+
+#cont input.submit {
+            background: linear-gradient(to bottom,  #2d50a2 0%,#2ca0a2 3%,#2c80a2 65%,#2c51a2 97%,#2c50a2 100%);
+            border: none;
+            cursor: pointer;
+            width: 85px;
+            height: 38px;
+            position: relative;
+            bottom: 2px;
+            left: 70%;
+			font-size:14px;
+			color:#FFF;
+        }
+#cont input[type="submit"]:hover{
+	
+	
+	background: linear-gradient(to bottom,  #2c50a2 0%,#2c51a2 3%,#2c80a2 35%,#2ca0a2 97%,#2d50a2 100%); 
+	
+}
