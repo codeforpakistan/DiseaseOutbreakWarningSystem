@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['user_id'])){
-	echo "<script>window.open('login-form.php?not_authorize=you are not authorize to access!','_self')</script>";
+	echo "<script>window.open('login-form.php','_self')</script>";
 
 
 }
@@ -84,7 +84,7 @@ if(!isset($_SESSION['user_id'])){
                     
                         <div class="five column alpha">
                             <div class="logo">
-                                <a href="admin_penal.php?map"><img src="images/Q L 23.png" width="140px" height="50px" /></a><!-- Large Logo -->
+                                <a href="admin_panel.php?map"><img src="images/Q L 23.png" width="140px" height="50px" /></a><!-- Large Logo -->
                             </div>
                         </div>
                     
@@ -120,7 +120,7 @@ if(!isset($_SESSION['user_id'])){
                     <div class="mini">
                         <div class="twelve column alpha omega mini">
                             
-                              <center>  <a href="admin_penal.php"><img src="images/Q L 23.png" width="140px" height="50px" /></a></center><!-- Small Logo -->
+                              <center>  <a href="admin_panel.php"><img src="images/Q L 23.png" width="140px" height="50px" /></a></center><!-- Small Logo -->
                            
                         </div>
                         
@@ -159,10 +159,10 @@ if(!isset($_SESSION['user_id'])){
                       <a href="#">&nbsp;&nbsp; &nbsp;Veiw Reports</a>
                             
                             
-                           <h5 class="semi"><a <?php if(isset($_GET['map2'])){ ?>class="active"<?php } ?> href="admin_penal.php?map&map2">&nbsp;&nbsp; &nbsp;Map</a></h5>
+                           <h5 class="semi"><a <?php if(isset($_GET['map2'])){ ?>class="active"<?php } ?> href="admin_panel.php?map&map2">&nbsp;&nbsp; &nbsp;Map</a></h5>
                            
-                           <h5 class="semi"><a href="admin_penal.php?veiw_user">&nbsp;&nbsp; &nbsp;Veiw User </a></h5>
-                            <h5 class="semi"><a  <?php if(isset($_GET['add_user']) OR isset($_GET['next'])){ ?>class="active"<?php } ?> href="admin_penal.php?add_user">&nbsp;&nbsp; &nbsp;Add User</a></h5>
+                           <h5 class="semi"><a href="admin_panel.php?veiw_user">&nbsp;&nbsp; &nbsp;Veiw User </a></h5>
+                            <h5 class="semi"><a  <?php if(isset($_GET['add_user']) OR isset($_GET['next'])){ ?>class="active"<?php } ?> href="admin_panel.php?add_user">&nbsp;&nbsp; &nbsp;Add User</a></h5>
                             <h5 class="semi"><a href="#">&nbsp;&nbsp; &nbsp;Warnings</a></h5>
                          </ul>  
                          <a href="#" id="pull">Menu</a> 

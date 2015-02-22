@@ -1,21 +1,15 @@
 <?php
 session_start();
-if(isset($_SESSION['user_id'])){
-	echo "<script>window.open('admin_panel.php?map','_self')</script>";
+if(!isset($_SESSION['user'])){
+	echo "<script>window.open('login-form.php','_self')</script>";
 
 
 }
 	else
 	{
-if(isset($_SESSION['user'])){
-	echo "<script>window.open('user_panel.php','_self')</script>";
-
-}
-
-		else{
-
-
+		
 ?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
@@ -31,7 +25,7 @@ if(isset($_SESSION['user'])){
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <link media="screen" charset="utf-8" rel="stylesheet" href="css/base.css" />
 <link media="screen" charset="utf-8" rel="stylesheet" href="css/skeleton.css" />
-<link media="screen" charset="utf-8" rel="stylesheet" href="css/layout2.css" />
+<link media="screen" charset="utf-8" rel="stylesheet" href="css/layout.css" />
 <link media="screen" charset="utf-8" rel="stylesheet" href="css/child.css" />
 <!--[if (IE 6)|(IE 7)]>
     <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" />
@@ -49,17 +43,12 @@ if(isset($_SESSION['user'])){
 <script type="text/javascript" src="js/colorpicker.js"></script>
 <!-- end of color pickers -->
 
-<meta charset="utf-8">
-		<link href="css/style.css" rel='stylesheet' type='text/css' />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-		<!--webfonts-->
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,300,600,700' rel='stylesheet' type='text/css'>
+
 
 </head>
 
 <body><div class="page-wrapper">
-        
+        <div class="slug-pattern"><div class="overlay"><div class="slug-cut"></div></div></div>
         <div class="header">
                 <div class="nav">       
                 
@@ -70,32 +59,31 @@ if(isset($_SESSION['user'])){
                     
                         <div class="five column alpha">
                             <div class="logo">
-                                <a href="index.php"><img src="images/Q L 23.png" width="140px" height="50px" /></a><!-- Large Logo -->
+                                <a href="user_penal.php"><img src="images/Q L 23.png" width="140px" height="50px" /></a><!-- Large Logo -->
                             </div>
                         </div>
                     
                         <div class="eleven column omega tabwrapper">
                             <div class="menu-wrapper">
-                            <br>
                                 <ul class="tabs menu">
                                     <li>
-                                       <a href="index.php"><span>Home</span></a>
+                                       <a href="index.php" ><span>Home</span></a>
                                      
                                     </li>
                                     <li><a href="#" >Outbreaks</a>
                                        
                                     <li>
-                                        <a href="blog.html">About US</a>
+                                        <a href="#">About US</a>
                                     </li>
                                     
                                     <li>
-                                        <a href="contact.html" >
+                                        <a href="#">
                                             Contact
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="login-form.php" class="active">
-                                            Login
+                                     <li>
+                                        <a href="logout.php" >
+                                            Logout
                                         </a>
                                     </li>
                                 </ul>
@@ -107,12 +95,12 @@ if(isset($_SESSION['user'])){
                     <div class="mini">
                         <div class="twelve column alpha omega mini">
                             
-                           <center>     <a href="index.html"><img src="images/Q L 23.png" width="140px" height="50px" /></a></center><!-- Small Logo -->
-                          
+                              <center>  <a href="index.php"><img src="images/Q L 23.png" width="140px" height="50px" /></a></center><!-- Small Logo -->
+                           
                         </div>
                         
                         <div class="twelve column alpha omega navagation-wrapper">
-                            <select class="navagation list1" >
+                            <select class="navagation">
                                 <option value="" selected="selected">Site Navagation</option>
                             </select>
                         </div>
@@ -123,33 +111,55 @@ if(isset($_SESSION['user'])){
             </div>
             
             <div class="shadow"></div>
+            <div class="container">
+                <div class="page-title">
+                    <div class="rg"></div>
+                    <h1>User Panel</h1>
+                </div>
+            </div>
+        </div>
+        
+        <div class="body">
+            <div class="body-round"></div>
+            <div class="body-wrapper">
+                <div class="side-shadows"></div>
+                <div class="content">
+                    <div class="container" >
+                       <div class="sixteen columns"><span class="hr mapdv"></span></div>
+                        <div class="contact three columns">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        <div class="contact thirteen columns">
+                           <div class="standard-form compressed" >
+                               
+                                <div class="form-result" ></div>
+                                
+                                <form action="user_panel.php" method="post" style="padding-left:15%">
+                                   <table >
+           <tr><td><label style="float:left; padding-bottom:25px;"><font size="3"> <strong>Dengue</strong></font></label></td><td> <input type="text" class="input"  name="dengue" /></td></tr>
+            <tr><td><label style="float:left; padding-bottom:25px;"><font size="3"> <strong>Polio</strong></font></label></td><td> <input type="text" class="input"  name="polio" placeholder="" /></td></tr>
+            <tr><td><label style="float:left; padding-bottom:25px;"><font size="3"> <strong>Malaria</strong></font> </label></td><td><input type="text" class="input"  name="malaria" placeholder="" /></td></tr>           
+            <tr><td><label style="float:left; padding-bottom:25px;"><font size="3"> <strong>Measles</strong></font></label> </td><td><input type="text" class="input"  name="measles" placeholder="" /></td></tr>
+            <tr><td><label style="float:left; padding-bottom:25px;"><font size="3"> <strong>Diarrhea  </strong></font></label></td><td><input type="text" class="input"  name="diarrhea" placeholder="" /></td></tr>
+            <tr><td><label style="float:left; padding-bottom:25px;"><font size="3"> <strong>Typhoid</strong></font></label></td><td> <input type="text" class="input"  name="typhoid" placeholder="" /></td></tr>
+             <tr><td><label style="float:left; padding-bottom:25px;"><font size="3"> <strong>Swine Flu</strong></font></label></td><td> <input type="text" class="input"  name="swine_flu" placeholder="" /></td></tr>
+          </table>
+                        <div class="clear"></div>
+                        <div id="contt">
+                                          <input class="submit" type="submit" name="Send" value="Send" />
+                                    </div>
+                                    <div class="clear"></div>
+                                </form>
+                            </div>
+                            
+                        </div>
                     </div>
-        <br><br>
-         <!-----start-main---->
-							<div class="login-form">
-					<div class="head">
-						<img src="images/login_button.png" width="119px" height="109px" alt=""/>
-						
-					</div>
-                    <br> 
-				<form method="post" action="login-form.php">
-                <?php include("check.php"); ?>
-					<li>
-						<input type="text" class="text" name="USERNAME" placeholder="USERNAME" ><a href="#" class=" icon user"></a>
-					</li>
-					<li>
-						<input type="password" name="Password" placeholder="Password" ><a href="#" class=" icon lock"></a>
-					</li>
-					<div class="p-container">
-								<label class="checkbox"><input type="checkbox" name="checkbox" checked><i></i>Remember Me</label>
-								<input type="submit" onclick="myFunction()" value="SIGN IN" name="login" >
-							<div class="clear"> </div>
-					</div>
-				</form>
-			</div>
-            <br><br><br><br>
-            
-            <div class="footer style-2">
+                </div>
+                        
+                        </div>
+                          
+                        </div>
+                   </div>
+                </div>
+            </div> <div class="footer style-2">
             	<div class="background"><div class="stitch"></div></div>
                 <div class="foot-nav-bg"></div>
             	<div class="content">
@@ -231,8 +241,7 @@ if(isset($_SESSION['user'])){
         });
     </script>
     <script type="text/javascript" src="js/jquery.color.animation.js"></script>
-    <script src="ajax/ajax_default.js" type="text/javascript"></script>
-    <script src="ajax/email_conf.js" type="text/javascript"></script>
+   
 	<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
     <script type="text/javascript" src="http://api.twitter.com/1/statuses/user_timeline/EmpiricalThemes.json?callback=twitterCallback2&count=2"></script>
 
@@ -240,35 +249,22 @@ if(isset($_SESSION['user'])){
 </body>
 
 </html>
-<?php 
 
-if(isset($_POST['login'])){
+<?php
+
+if(isset($_POST['Send'])){
+
 include("database.php");
-$user_name=$_POST['USERNAME'];
-$user_pass=$_POST['Password'];
+$dengue=$_POST['dengue'];
+$polio=$_POST['polio'];
+$malaria=$_POST['malaria'];
+$measles=$_POST['measles'];
+$diarrhea=$_POST['diarrhea'];
+$typhoid=$_POST['typhoid'];
+$swine_flu=$_POST['swine_flu'];
 
-$select_user="select user.user_id , user.user_pass , role.user_role as role from user INNER join role on user.user_id=role.user_id and user.user_id='$user_name' and user.user_pass='$user_pass' ";
-$run_user=mysql_query($select_user);
-$row=mysql_fetch_assoc($run_user);
-
-
-
-
- $role=$row['role'];
-	
-	
-if($role=='admin'){
-	$_SESSION['user_id']=$user_name;
-echo "<script>window.open('admin_panel.php?map','_self')</script>";	
-}
-else
-{
-if($role=='reporter'){
-	$_SESSION['user']=$user_name;
-echo "<script>window.open('user_panel.php?','_self')</script>";	
+$query="insert into reports VALUES (Dengue,$dengue)";
+mysql_query($query);
 }
 
-}
-}
-?>
-<?php } }?>
+ } ?>

@@ -102,7 +102,7 @@
             <div class="container">
                 <div class="page-title">
                     <div class="rg"></div>
-                    <h1>Welcome To QDEWS</h1>
+                    <h1>Quick Disease Early Warning System</h1>
                 </div>
             </div>
         </div>
@@ -174,7 +174,7 @@
                         	<div class="foot-nav-bg"></div>
                             <div class="foot-nav">
                                 <div class="copy">
-                                    Coptyright © 2015 QDEWS. By Shakir Ullah & Zaheer Uddin
+                                    Coptyright © 2015 QDEWS. By Shakir Ullah , Zaheer Uddin & M.Bilal
                                 </div>
                                 <div class="nav">
                                     <a href="#">Home</a>

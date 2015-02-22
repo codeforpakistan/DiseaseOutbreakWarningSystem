@@ -57,3 +57,21 @@ a, a:visited { color: #2f86a8; }
 	background: linear-gradient(to bottom,  #2c50a2 0%,#2c51a2 3%,#2c80a2 35%,#2ca0a2 97%,#2d50a2 100%); 
 	
 }
+#contt input.submit {
+            background: linear-gradient(to bottom,  #2d50a2 0%,#2ca0a2 3%,#2c80a2 65%,#2c51a2 97%,#2c50a2 100%);
+            border: none;
+            cursor: pointer;
+            width: 85px;
+            height: 38px;
+            position: relative;
+            bottom: 2px;
+            left: 45%;
+			font-size:14px;
+			color:#FFF;
+        }
+#contt input[type="submit"]:hover{
+	
+	
+	background: linear-gradient(to bottom,  #2c50a2 0%,#2c51a2 3%,#2c80a2 35%,#2ca0a2 97%,#2d50a2 100%); 
+	
+}
